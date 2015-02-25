@@ -33,7 +33,7 @@ Example Playbook
 License
 -------
 
-[GPLv3](http://www.gnu.org/copyleft/gpl.html)
+[MIT](LICENSE)
 
 Author Information
 ------------------
