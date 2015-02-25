@@ -1,5 +1,6 @@
 Short Stack: Drupal
 =========
+[![Build Status](https://travis-ci.org/poetic/short-stack-drupal.svg)](https://travis-ci.org/poetic/short-stack-drupal)
 
 Installs php56 and drush.
 
@@ -32,7 +33,7 @@ Example Playbook
 License
 -------
 
-[GPLv3](http://www.gnu.org/copyleft/gpl.html)
+[MIT](LICENSE)
 
 Author Information
 ------------------

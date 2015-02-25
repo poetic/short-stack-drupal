@@ -1,0 +1,26 @@
+language: objective-c
+
+before_install:
+- brew update
+
+install:
+- sudo pip install ansible --quiet
+  # preinstall php with travis_wait to avoid timeout
+- brew tap homebrew/php
+- travis_wait brew install php56 --without-pear
+
+before_script:
+- cp tests/short-stack.yml ~/.short-stack.yml
+
+script:
+- bash <(curl -s curl -L https://raw.githubusercontent.com/poetic/short-stack/master/install.sh) --skip-short-stack
+- bash short-stack
+- >
+  short-stack
+  | grep -q 'changed=0.*failed=0'
+  && (echo 'Idempotence test: pass' && exit 0)
+  || (echo 'Idempotence test: fail' && exit 1)
+
+notifications:
+  slack:
+    secure: ktbi02lNRkh3YIxJTur2fS4vpd9mMQpbnS1b/xeyo907n5iX4fSaCMhOGUMEtlzBTVB8k0kTiPf+ow7JVJUIv1BuUkHj2XxGNkQdl0LhKof1e2q7Hh/VShO9fx3Zk0odTmaRdd5Fg3GhincOH9wdZEa7TwqpYcZVRuPGpuOhyiw=

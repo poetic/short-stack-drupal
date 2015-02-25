@@ -1,0 +1,13 @@
+- name: core roles
+  hosts: all
+  roles:
+    - bootstrap
+    - cask
+    - tmux
+    - vim
+    - zsh
+
+- name: optional roles
+  hosts: all
+  roles:
+    - drupal
