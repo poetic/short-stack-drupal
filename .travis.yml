@@ -20,3 +20,7 @@ script:
   | grep -q 'changed=0.*failed=0'
   && (echo 'Idempotence test: pass' && exit 0)
   || (echo 'Idempotence test: fail' && exit 1)
+
+notifications:
+  slack:
+    secure: ktbi02lNRkh3YIxJTur2fS4vpd9mMQpbnS1b/xeyo907n5iX4fSaCMhOGUMEtlzBTVB8k0kTiPf+ow7JVJUIv1BuUkHj2XxGNkQdl0LhKof1e2q7Hh/VShO9fx3Zk0odTmaRdd5Fg3GhincOH9wdZEa7TwqpYcZVRuPGpuOhyiw=
