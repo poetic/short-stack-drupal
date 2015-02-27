@@ -1,6 +1,7 @@
 ---
 galaxy_info:
   author: Matthew Hager
+  description: Short Stack role that installs php56 and drush.
   company: Poetic Systems
   license: MIT
   min_ansible_version: 1.8
