@@ -22,7 +22,7 @@ None
 Example Playbook
 ----------------
 
-See: [tests/stack.yml](tests/stack.yml)
+[tests/stack.yml](tests/stack.yml)
 
 License
 -------
