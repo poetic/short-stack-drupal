@@ -2,7 +2,6 @@
   hosts: all
   roles:
     - bootstrap
-    - cask
     - tmux
     - vim
     - zsh

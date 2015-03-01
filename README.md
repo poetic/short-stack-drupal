@@ -23,7 +23,7 @@ Example Playbook
 ----------------
 
 ```yaml
-# short-stack.yml
+# stack.yml
 - name: optional roles
   hosts: all
   roles:

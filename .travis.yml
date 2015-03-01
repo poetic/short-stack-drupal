@@ -10,7 +10,7 @@ install:
 - travis_wait brew install php56 --without-pear
 
 before_script:
-- cp tests/short-stack.yml ~/.short-stack.yml
+- cp tests/stack.yml ~/.stack.yml
 
 script:
 - bash <(curl -s curl -L https://raw.githubusercontent.com/poetic/short-stack/master/install.sh) --skip-short-stack
