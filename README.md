@@ -22,13 +22,7 @@ None
 Example Playbook
 ----------------
 
-```yaml
-# stack.yml
-- name: optional roles
-  hosts: all
-  roles:
-    - drupal
-```
+See: [tests/stack.yml](tests/stack.yml)
 
 License
 -------
