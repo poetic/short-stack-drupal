@@ -1,3 +1,4 @@
+---
 - name: core roles
   hosts: all
   roles:
