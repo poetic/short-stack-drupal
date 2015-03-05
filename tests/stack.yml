@@ -9,4 +9,4 @@
 - name: optional roles
   hosts: all
   roles:
-    - drupal
+    - short-stack-drupal

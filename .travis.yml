@@ -11,6 +11,7 @@ install:
 
 before_script:
 - cp tests/stack.yml ~/.stack.yml
+- cp tests/galaxy.yml ~/.galaxy.yml
 
 script:
 - bash <(curl -s curl -L https://raw.githubusercontent.com/poetic/short-stack/master/install.sh) --skip-short-stack
