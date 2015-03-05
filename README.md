@@ -22,6 +22,7 @@ None
 Example Playbook
 ----------------
 
+[tests/galaxy.yml](tests/galaxy.yml)
 [tests/stack.yml](tests/stack.yml)
 
 License
