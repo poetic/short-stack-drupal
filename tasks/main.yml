@@ -7,3 +7,6 @@
 
 - name: install/update drush
   homebrew: name=drush state=head
+
+- name: install/update patchutils
+  homebrew: name=patchutils state=latest
