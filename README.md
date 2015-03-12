@@ -2,7 +2,7 @@ Short Stack: Drupal
 =========
 [![Build Status](https://travis-ci.org/poetic/short-stack-drupal.svg)](https://travis-ci.org/poetic/short-stack-drupal)
 
-Installs php56 and drush.
+Installs drush.
 
 Requirements
 ------------

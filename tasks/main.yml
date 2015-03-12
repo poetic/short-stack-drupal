@@ -1,9 +1,9 @@
 ---
-- name: tap homebrew/php
-  homebrew_tap: tap=homebrew/php state=present
+- name: ensure homebrew/php is tapped
+  homebrew_tap: tap=homebrew/php
 
-- name: install/update php56 so that drush can be installed
+- name: ensure php56 is installed/updated
   homebrew: name=php56 state=latest install_options=without-pear
 
-- name: install/update drush
+- name: ensure drush is installed/updated from HEAD
   homebrew: name=drush state=head
