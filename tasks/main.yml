@@ -5,5 +5,5 @@
 - name: ensure php56 is installed/updated
   homebrew: name=php56 state=latest install_options=without-pear
 
-- name: ensure drush is installed/updated from HEAD
+- name: ensure drush is installed/updated to HEAD
   homebrew: name=drush state=head
