@@ -7,3 +7,6 @@
 
 - name: ensure drush is installed/updated to HEAD
   homebrew: name=drush state=head
+
+- name: install/update patchutils
+  homebrew: name=patchutils state=latest
