@@ -7,3 +7,8 @@
 
 - name: ensure drush is installed/updated to HEAD
   homebrew: name=drush state=head
+
+- name: ensure valkyrie is installed
+  command: drush dl valkyrie
+  args:
+    creates: ~/.drush/valkyrie
