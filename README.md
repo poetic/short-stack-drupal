@@ -30,6 +30,7 @@ Usage
 
 After installing [Short Stack](https://github.com/poetic/short-stack)
 * At the bottom of ~/.galaxy.yml put:
+
 ```- src: https://github.com/poetic/short-stack-drupal
   name: drupal```
 * At the bottom of the roles section in ~/.stack.yml file put:
