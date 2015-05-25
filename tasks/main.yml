@@ -15,7 +15,7 @@
   shell: composer global require drush/drush:7.*
   register: drush_install
   changed_when: >
-    'Nothing to install or update' not in drush_install.stdout
+    'Nothing to install or update' not in drush_install.stderr
 
 - name: ensure configuration is added to stack.d
   copy: src={{ item }} dest={{ stack_d }}
