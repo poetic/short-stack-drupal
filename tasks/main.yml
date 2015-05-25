@@ -5,8 +5,22 @@
 - name: ensure php56 is installed/updated
   homebrew: name=php56 state=latest install_options=without-pear
 
-- name: ensure drush is installed/updated to HEAD
-  homebrew: name=drush state=head
+- name: ensure composer is installed/updated
+  homebrew: name=composer state=latest
+
+- name: ensure composer is installed/updated
+  homebrew: name=composer state=latest
+
+- name: ensure drush is installed
+  shell: composer global require drush/drush:7.*
+  register: drush_install
+  changed_when: >
+    'Nothing to install or update' not in drush_install.stdout
+
+- name: ensure configuration is added to stack.d
+  copy: src={{ item }} dest={{ stack_d }}
+  with_items:
+    - drupal.zsh
 
 - name: ensure valkyrie is installed
   command: drush dl valkyrie
