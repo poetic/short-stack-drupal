@@ -12,7 +12,7 @@
   homebrew: name=composer state=latest
 
 - name: ensure drush is installed
-  shell: composer global require drush/drush:7.*
+  shell: composer global require drush/drush:dev-master
   register: drush_install
   changed_when: >
     'Nothing to install or update' not in drush_install.stderr
