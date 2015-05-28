@@ -23,6 +23,6 @@
     - drupal.zsh
 
 - name: ensure valkyrie is installed
-  command: drush dl valkyrie
+  command: ~/.composer/vendor/bin/drush
   args:
     creates: ~/.drush/valkyrie
