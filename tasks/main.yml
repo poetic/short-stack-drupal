@@ -13,9 +13,8 @@
 
 - name: ensure drush is installed
   shell: composer global require drush/drush:dev-master
-  register: drush_install
-  changed_when: >
-    'Nothing to install or update' not in drush_install.stderr
+  args:
+    creates: ~/.composer/vendor/drush
 
 - name: ensure configuration is added to stack.d
   copy: src={{ item }} dest={{ stack_d }}
