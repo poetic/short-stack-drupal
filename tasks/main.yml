@@ -1,6 +1,10 @@
 ---
 - name: ensure homebrew/php is tapped
-  homebrew_tap: tap=homebrew/php
+  homebrew_tap: tap={{ item }}
+  with_items:
+    - homebrew/dupes
+    - homebrew/versions
+    - homebrew/php
 
 - name: ensure php56 is installed/updated
   homebrew: name=php56 state=latest install_options=without-pear
@@ -9,9 +13,7 @@
   homebrew: name=composer state=latest
 
 - name: ensure drush is installed
-  shell: composer global require drush/drush:dev-master
-  args:
-    creates: ~/.composer/vendor/drush/drush
+  homebrew: name=drush state=latest
 
 - name: ensure drupal console is installed
   shell: composer global require drupal/console:@stable
