@@ -26,6 +26,9 @@
     - drupal.zsh
 
 - name: ensure valkyrie is installed
-  command: ~/.composer/vendor/bin/drush
+  command: drush
   args:
     creates: ~/.drush/valkyrie
+
+- name: ensure valkyrie is installed
+    git: repo=git@github.com:GetValkyrie/valkyrie.git dest=~/.drush/valkyrie version=0.5.1
