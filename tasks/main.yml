@@ -1,6 +1,10 @@
 ---
 - name: ensure homebrew/php is tapped
-  homebrew_tap: tap=homebrew/php
+  homebrew_tap: tap={{ item }}
+  with_items:
+    - homebrew/dupes
+    - homebrew/versions
+    - homebrew/php
 
 - name: ensure php56 is installed/updated
   homebrew: name=php56 state=latest install_options=without-pear
@@ -9,14 +13,7 @@
   homebrew: name=composer state=latest
 
 - name: ensure drush is installed
-  shell: composer global require drush/drush:dev-master
-  args:
-    creates: ~/.composer/vendor/drush/drush
-
-- name: ensure drupal console is installed
-  shell: composer global require drupal/console:@stable
-  args:
-    creates: ~/.composer/vendor/drupal/console
+  homebrew: name=drush state=latest
 
 - name: ensure configuration is added to stack.d
   copy: src={{ item }} dest={{ stack_d }}
@@ -24,6 +21,4 @@
     - drupal.zsh
 
 - name: ensure valkyrie is installed
-  command: ~/.composer/vendor/bin/drush
-  args:
-    creates: ~/.drush/valkyrie
+    git: repo=git@github.com:GetValkyrie/valkyrie.git dest=~/.drush/valkyrie version=0.5.1
